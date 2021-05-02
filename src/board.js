@@ -50,6 +50,16 @@ class Board {
                     return true;
                 }
         }
+        if (this.state[0][0] == this.state[1][1] && 
+            this.state[1][1] == this.state[2][2] &&
+            this.state[1][1] !== null) {
+                return true;
+            }
+        if (this.state[2][2] == this.state[1][1] && 
+            this.state[1][1] == this.state[0][0] &&
+            this.state[1][1] !== null) {
+                return true;
+            }
         return false;
     }
 }
