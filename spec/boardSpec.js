@@ -26,5 +26,12 @@ describe('Board', () => {
             expect(function() { game.play(0,0); } ).toThrow(new Error("Space already taken, pick a vacant square!"))
             expect(game.state).toEqual([ ["X", null, null], [null, null, null], [null, null, null] ])
        });
+       it('Returns Player X wins if they get 3 in a row vertically', () => {
+            game.play(0,0)
+            game.play(1,0)
+            game.play(0,1)
+            game.play(1,1)
+            expect(game.play(0,2)).toEqual("Player X Wins!")
+       });
    });
 });
