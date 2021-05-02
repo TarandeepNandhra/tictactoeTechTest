@@ -33,5 +33,13 @@ describe('Board', () => {
             game.play(1,1)
             expect(game.play(0,2)).toEqual("Player X Wins!")
        });
+       it('Returns Player O Wins! if they get 3 in a row horizontally', () => {
+            game.play(2,2)
+            game.play(0,0)
+            game.play(1,1)
+            game.play(0,1)
+            game.play(1,2)
+            expect(game.play(0,2)).toEqual("Player O Wins!")
+       });
    });
 });

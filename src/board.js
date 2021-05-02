@@ -34,10 +34,19 @@ class Board {
     }
 
     playerWin() {
+        // If 3 in a row vertically
         for(var i = 0; i < 3; i++) {
             if (this.state[0][i] == this.state[1][i] && 
                 this.state[1][i] == this.state[2][i] &&
                 this.state[1][i] !== null) {
+                    return true;
+                }
+        }
+        // If 3 in a row horizontally
+        for(var i = 0; i < 3; i++) {
+            if (this.state[i][0] == this.state[i][1] && 
+                this.state[i][1] == this.state[i][2] &&
+                this.state[i][1] !== null) {
                     return true;
                 }
         }
