@@ -14,11 +14,7 @@ class Board {
             return this.winner;
         }
 
-        if (this.isXTurn) {
-            this.state[y][x] = "X";
-        } else {
-            this.state[y][x] = "O";
-        }
+        this.updateState(x, y);
 
         if (this.playerWin()) {
             this.isXTurn ? this.winner = "Player X Wins!" : this.winner = "Player O Wins!"
@@ -27,6 +23,14 @@ class Board {
 
         this.isXTurn = !this.isXTurn;        
         return this.state;
+    }
+
+    updateState(x, y) {
+        if (this.isXTurn) {
+            this.state[y][x] = "X";
+        } else {
+            this.state[y][x] = "O";
+        }
     }
 
     playerWin() {
