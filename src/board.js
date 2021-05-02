@@ -5,6 +5,10 @@ class Board {
     }
 
     play(x, y) {
+        if (this.state[y][x] !== null) {
+            throw new Error("Space already taken, pick a vacant square!");
+        }
+
         if (this.isXTurn) {
             this.state[y][x] = "X";
         } else {

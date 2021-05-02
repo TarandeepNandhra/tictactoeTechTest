@@ -20,5 +20,11 @@ describe('Board', () => {
             game.play(0,0)
             expect(game.play(2,0)).toEqual([ ["X", null, "O"], [null, null, null], [null, null, null] ])
        });
+
+       it('Only allows players to select empty spaces', () => {
+            game.play(0,0)
+            expect(function() { game.play(0,0); } ).toThrow(new Error("Space already taken, pick a vacant square!"))
+            expect(game.state).toEqual([ ["X", null, null], [null, null, null], [null, null, null] ])
+       });
    });
 });
