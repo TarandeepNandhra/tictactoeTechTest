@@ -96,7 +96,7 @@ class Board {
     //         (this.state[0][2] == this.state[1][1] && 
     //         this.state[1][1] == this.state[2][0] &&
     //         this.state[1][1] !== null);
-
+ 
     //     if (leftDiagonal === true || rightDiagonal === true) {
     //         return true;
     //     } else {

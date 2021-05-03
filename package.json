@@ -1,0 +1,32 @@
+{
+  "name": "tictactoe",
+  "version": "1.0.0",
+  "description": "This is a very common tech test as it demonstrates a candidate's knowledge of basic data structures.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "karma start karma.conf.js --single-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taran314/tictactoeTechTest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/taran314/tictactoeTechTest/issues"
+  },
+  "homepage": "https://github.com/taran314/tictactoeTechTest#readme",
+  "devDependencies": {
+    "eslint": "^7.25.0",
+    "eslint-plugin-jasmine": "^4.1.2",
+    "jasmine": "^3.7.0",
+    "jasmine-core": "^3.7.1",
+    "karma": "^6.3.2",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-coverage": "^2.0.3",
+    "karma-jasmine": "^4.0.1"
+  }
+}
