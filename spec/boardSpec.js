@@ -47,6 +47,6 @@ describe('Board', () => {
         game.play(1,1)
         game.play(1,2)
         expect(game.play(2,2)).toEqual("Player X Wins!")
-   });
+        });
    });
 });
