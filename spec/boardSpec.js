@@ -42,11 +42,19 @@ describe('Board', () => {
             expect(game.play(0,2)).toEqual("Player O Wins!")
        });
        it('Returns Player X wins if they get 3 in a row diagonally', () => {
-        game.play(0,0)
-        game.play(1,0)
-        game.play(1,1)
-        game.play(1,2)
-        expect(game.play(2,2)).toEqual("Player X Wins!")
+            game.play(0,0)
+            game.play(1,0)
+            game.play(1,1)
+            game.play(1,2)
+        	expect(game.play(2,2)).toEqual("Player X Wins!")
+        });
+        it('Returns Player O if the get 3 in a row left diagonal', () => {
+            game.play(0,0)
+			game.play(0,2)
+			game.play(1,0)
+			game.play(1,1)
+			game.play(1,2)
+			expect(game.play(2,0)).toEqual("Player O Wins!")
         });
    });
 });
