@@ -56,5 +56,16 @@ describe('Board', () => {
 			game.play(1,2)
 			expect(game.play(2,0)).toEqual("Player O Wins!")
         });
+		it('Returns a draw if all spaces are filled and no winners', () => {
+			game.play(0,0)
+			game.play(0,1)
+			game.play(1,1)
+			game.play(1,2)
+			game.play(0,2)
+			game.play(2,0)
+			game.play(2,1)
+			game.play(2,2)
+			expect(game.play(1,0)).toEqual("Draw! Board is full!")
+		});
    });
 });

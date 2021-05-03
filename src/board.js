@@ -21,6 +21,11 @@ class Board {
             return this.winner;
         }
 
+        if (this.isBoardFull()) {
+            this.winner = "Draw! Board is full!";
+            return this.winner;
+        }
+
         this.isXTurn = !this.isXTurn;        
         return this.state;
     }
@@ -31,6 +36,17 @@ class Board {
         } else {
             this.state[y][x] = "O";
         }
+    }
+
+    isBoardFull() {
+        for(var i = 0; i < 3; i++) {
+            for(var j = 0; j < 3; j++) {
+                if (this.state[i][j] == null) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 
     playerWin() {
